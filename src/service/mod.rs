@@ -31,7 +31,10 @@
 //! is called.
 
 mod make_service;
+mod oneshot;
 mod service;
 
 pub use self::make_service::{make_service_fn, MakeService, MakeServiceRef};
 pub use self::service::{service_fn, Service};
+
+pub(crate) use self::oneshot::{oneshot, Oneshot};
